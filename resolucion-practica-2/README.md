@@ -157,16 +157,16 @@ Resultado: `batch_002` ≈ 0.99%, `initial` ≈ 0.10%, `batch_003` ≈ 0.99%. No
 
 **7.** ¿Qué día presenta el mayor monto total y cuál la mayor cantidad de transacciones?
 
-\`\`\`sql
+```sql
 SELECT sale_date, SUM(transaction_count) AS transaction_count, SUM(total_amount) AS total_amount
 FROM gold_daily_sales
 GROUP BY sale_date
 ORDER BY total_amount DESC
-\`\`\`
+```
 
 El día con mayor monto total y mayor cantidad de transacciones es el mismo: 2026-03-01, con $7.310.840,77 y 7.236 transacciones. Ambos máximos coinciden. (`gold_daily_sales` tiene una fila por día, país, categoría y canal, así que hace falta agrupar por `sale_date` con `SUM` para obtener el total del día — una consulta sin `GROUP BY` solo muestra el máximo de una combinación puntual, no el total diario.)
 
-<img width="951" height="948" alt="q07" src="https://github.com/user-attachments/assets/37ff382d-3b74-4bf4-a802-a750dce2105a" />
+![Pregunta 7](q07.png)
 
 **8.** ¿Qué canal de pago tiene la mayor tasa global de fraude?
 
