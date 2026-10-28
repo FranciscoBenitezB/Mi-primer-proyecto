@@ -10,7 +10,7 @@ Respondé cada pregunta en una a tres oraciones. Cuando se pide un dato, copiá 
 
 **1.** En la cola quedan solo los mensajes 4 y 5, dado que se borraron el 1, 2 y 3 al ser leídos. En el log, en cambio, todavía quedan los 5 mensajes, dado que no se borran.
 
-**2.** El consumidor `antifraude` leyó 120 mensajes y `reportes` leyó 0. El atraso de `reportes` no afecta a `antifraude` porque cada consumidor mantiene su propio offset/checkpoint de forma independiente.
+**2.** El consumidor `antifraude` leyó 180 mensajes y `reportes` leyó 0. El atraso de `reportes` no afecta a `antifraude` porque cada consumidor mantiene su propio offset/checkpoint de forma independiente.
 
 **3.** Un offset es el punto hasta donde un consumidor ya leyó el log. Se guarda en el checkpoint de cada consumidor, e indica desde dónde tiene que retomar la lectura.
 
