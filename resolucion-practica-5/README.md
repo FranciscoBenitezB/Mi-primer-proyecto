@@ -43,11 +43,9 @@
 | Run\_1 | logistic\_regression | basicas | ninguno | 0.5 | C=1.0 | 0.341 | 0.339 | 0.896 | 0.493 | 0.045 | 0.082 |
 
 
-
 **Run registrado: mejor\_balanced (gradient boosting, completas, class\_weight = balanced).**
 
 ## Datos y tracking
-
 
 
 **1.** El split train tiene 35.654 filas (11,05 % de contracargos), test tiene 7.129 (10,38 %) y nuevas tiene 7.165 (11,05 %). Se separa por fecha porque así se entrena con el pasado (1 al 5 de marzo) y se evalúa con lo que viene después (6 de marzo), igual que cuando el modelo esté en uso real. Si se separara al azar, el modelo vería información del futuro durante el entrenamiento y el resultado en test sería más optimista de lo que en verdad va a rendir.
